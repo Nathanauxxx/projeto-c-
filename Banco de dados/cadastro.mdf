@@ -1,0 +1,24 @@
+USE [master]
+GO
+CREATE DATABASE Cadastro
+
+USE Cadastro
+GO
+
+CREATE TABLE [dbo].[Usuarios]
+(
+   [Id] INT NOT NULL PRIMARY KEY IDENTITY,
+   [NomeUsuario] NVARCHAR(50) NOT NULL,
+   [Senha] NVARCHAR(50) NOT NULL
+)
+
+USE Cadastro
+GO
+
+CREATE TABLE [dbo].[Produtos](
+	[ProdutoId] INT NOT NULL PRIMARY KEY IDENTITY,
+	[Nome] NVARCHAR(100) NOT NULL,
+	[Descricao] NVARCHAR(150) NOT NULL,
+	[Preco] DECIMAL(18, 2) NOT NULL,
+	[Imagem] NVARCHAR(250) NULL
+)
